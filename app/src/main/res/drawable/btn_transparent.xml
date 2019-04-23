@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@color/light_orange">
+        <shape android:shape="rectangle">
+            <!--apply button background transparent, full opacity-->
+            <solid android:color="#4DFFFFFF"/>
+            <stroke android:color="#d2d2d2" android:width="1dp"/>
+            <!--make button border solid color, nontransparent-->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@color/orange">
+        <shape android:shape="rectangle">
+            <!--apply button background transparent, full opacity-->
+            <solid android:color="#26FFFFFF"/>
+            <stroke android:color="#d2d2d2" android:width="1dp"/>
+            <!--make button border solid color, nontransparent-->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+</selector>
