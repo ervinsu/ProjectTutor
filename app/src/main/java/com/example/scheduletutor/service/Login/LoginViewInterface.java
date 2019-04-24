@@ -1,7 +1,7 @@
 package com.example.scheduletutor.service.Login;
 
 import com.example.scheduletutor.model.User.User;
-import com.example.scheduletutor.model.UserResponse;
+import com.example.scheduletutor.model.User.UserResponse;
 
 import java.util.List;
 

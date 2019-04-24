@@ -4,16 +4,19 @@ import com.example.scheduletutor.model.User.User;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ClassTutor extends User {
+public class ClassTutor {
     @SerializedName("classID")
     @Expose
     private String classID;
+
     @SerializedName("className")
     @Expose
     private String className;
+
     @SerializedName("classTime")
     @Expose
     private String classTime;
+
     @SerializedName("classShift")
     @Expose
     private int classShift;
@@ -22,8 +25,36 @@ public class ClassTutor extends User {
     @Expose
     private String classLocation;
 
+    @SerializedName("classCategory")
+    @Expose
+    private String classCategory;
+
+    @SerializedName("tutorName")
+    @Expose
+    private String tutorName;
+
+    @SerializedName("tutorPhoto")
+    @Expose
+    private String tutorPhoto;
+
     public String getClassLocation() {
         return classLocation;
+    }
+
+    public String getTutorName() {
+        return tutorName;
+    }
+
+    public void setTutorName(String tutorName) {
+        this.tutorName = tutorName;
+    }
+
+    public String getTutorPhoto() {
+        return tutorPhoto;
+    }
+
+    public void setTutorPhoto(String tutorPhoto) {
+        this.tutorPhoto = tutorPhoto;
     }
 
     public void setClassLocation(String classLocation) {

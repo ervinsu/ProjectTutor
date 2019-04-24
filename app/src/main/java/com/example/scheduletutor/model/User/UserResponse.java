@@ -1,4 +1,4 @@
-package com.example.scheduletutor.model;
+package com.example.scheduletutor.model.User;
 
 import com.example.scheduletutor.model.User.User;
 import com.google.gson.annotations.Expose;

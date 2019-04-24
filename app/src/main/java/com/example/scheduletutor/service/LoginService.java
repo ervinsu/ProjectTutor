@@ -1,6 +1,6 @@
 package com.example.scheduletutor.service;
 
-import com.example.scheduletutor.model.UserResponse;
+import com.example.scheduletutor.model.User.UserResponse;
 import com.google.gson.JsonObject;
 
 import io.reactivex.Observable;

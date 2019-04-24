@@ -2,18 +2,12 @@ package com.example.scheduletutor.base;
 
 import android.util.Log;
 
-import com.example.scheduletutor.model.User.User;
-import com.example.scheduletutor.model.UserResponse;
+import com.example.scheduletutor.model.User.UserResponse;
 import com.example.scheduletutor.service.Login.LoginViewInterface;
 
-import java.util.List;
-
 import io.reactivex.Observable;
-import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 

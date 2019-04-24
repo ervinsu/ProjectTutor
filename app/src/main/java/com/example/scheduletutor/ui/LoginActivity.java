@@ -14,7 +14,7 @@ import com.example.scheduletutor.application.LoginApplication;
 import com.example.scheduletutor.base.LoginPresenter;
 import com.example.scheduletutor.model.User.User;
 import com.example.scheduletutor.model.User.UserLocalStore;
-import com.example.scheduletutor.model.UserResponse;
+import com.example.scheduletutor.model.User.UserResponse;
 import com.example.scheduletutor.service.Login.LoginViewInterface;
 import com.example.scheduletutor.service.LoginService;
 import com.google.gson.JsonArray;
@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity implements LoginViewInterfa
 
     @Inject
     LoginService loginService;
+
     private LoginPresenter presenter;
 
     @BindView(R.id.etUserName)
@@ -80,9 +81,11 @@ public class LoginActivity extends AppCompatActivity implements LoginViewInterfa
         i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         UserLocalStore userLocalStore = new UserLocalStore(this);
         userLocalStore.storeUserData(users.get(0));
+        Toast.makeText(this, users.get(0).getUserPhoto(), Toast.LENGTH_SHORT).show();
         userLocalStore.setUserLoggedIn(true);
         Toast.makeText(this, userLocalStore.getUserLoggedIn()+"", Toast.LENGTH_SHORT).show();
         i.putExtra("role",users.get(0).getUserRoleID());
+        finish();
         startActivity(i);
     }
 

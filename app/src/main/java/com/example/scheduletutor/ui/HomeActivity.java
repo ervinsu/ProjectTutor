@@ -68,7 +68,7 @@ public class HomeActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Sedang Dalam Perbaikan!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
             }
@@ -100,7 +100,7 @@ public class HomeActivity extends AppCompatActivity
         ImageView imageView = headerLayout.findViewById(R.id.ivUserPhoto);
         TextView tvName = headerLayout.findViewById(R.id.tvUserName);
         TextView tvEmail = headerLayout.findViewById(R.id.tvUserEmail);
-        Glide.with(this).load(currUser.getUserPhoto()).into(imageView);
+        Glide.with(HomeActivity.this).load("http:\\/\\/myavantgardeina.com\\/tutorApps\\/profile1.jpg").into(imageView);
         tvName.setText(currUser.getUserName());
         tvEmail.setText(currUser.getUserEmail());
 
@@ -166,14 +166,20 @@ public class HomeActivity extends AppCompatActivity
             Toast.makeText(this, "kelas saya", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_exit) {
             userLocalStore.clearUserData();
+            Intent i =new Intent(HomeActivity.this, LoginActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             finish();
+            startActivity(i);
         } else if (id == R.id.nav_history) {
             fragment= new HistoryFragment();
             Toast.makeText(this, "history", Toast.LENGTH_SHORT).show();
         }
-        fragmentManager.beginTransaction()
-                .replace(R.id.frame_container, fragment)
-                .commit();
+        if(fragment!=null) {
+            fragmentManager.beginTransaction()
+                    .replace(R.id.frame_container, fragment)
+                    .commit();
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

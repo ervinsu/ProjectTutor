@@ -8,7 +8,6 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:contentDescription="@string/photo"
-        android:background="@drawable/ic_exit"
         android:id="@+id/iv_photo_tutor"
         android:layout_marginEnd="5dp"/>
 
@@ -60,6 +59,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnDaftar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/daftar"

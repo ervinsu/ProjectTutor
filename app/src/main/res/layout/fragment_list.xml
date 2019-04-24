@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvClassList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/cv_list_class">

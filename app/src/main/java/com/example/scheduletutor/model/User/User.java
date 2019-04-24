@@ -10,9 +10,11 @@ public class User {
     @SerializedName("userFullName")
     @Expose
     private String userName;
+
     @SerializedName("userPhoto")
     @Expose
     private String userPhoto;
+
     @SerializedName("userRating")
     @Expose
     private String userRating;
