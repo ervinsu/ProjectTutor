@@ -15,7 +15,7 @@ import dagger.Provides;
 import retrofit2.Retrofit;
 
 @Module
-public class HomeModule {
+public class  HomeModule {
     private Context context;
 
     public HomeModule(Context context) {

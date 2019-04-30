@@ -20,6 +20,7 @@ public class UserLocalStore {
     public UserLocalStore(Context context){
         userLocalDatabase = context.getSharedPreferences(SP_Name,0);
         editor = userLocalDatabase.edit();
+
     }
 
     public void storeUserData(User user){

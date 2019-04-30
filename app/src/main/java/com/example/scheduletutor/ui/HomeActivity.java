@@ -2,6 +2,7 @@ package com.example.scheduletutor.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.scheduletutor.MainActivity;
 import com.example.scheduletutor.R;
 import com.example.scheduletutor.di.component.DaggerHomeComponent;
 import com.example.scheduletutor.di.component.HomeComponent;
@@ -31,6 +33,8 @@ import com.example.scheduletutor.model.User.User;
 import com.example.scheduletutor.model.User.UserLocalStore;
 import com.example.scheduletutor.ui.fragment.HistoryFragment;
 import com.example.scheduletutor.ui.fragment.ListFragment;
+
+import java.net.URI;
 
 import javax.inject.Inject;
 
@@ -65,11 +69,14 @@ public class HomeActivity extends AppCompatActivity
 
         checkUserLoggedIn();
         setSupportActionBar(toolbar);
+
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Sedang Dalam Perbaikan!", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(Intent.ACTION_ALL_APPS));
+//                Snackbar.make(view, "Sedang Dalam Perbaikan!", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
 
             }
         });

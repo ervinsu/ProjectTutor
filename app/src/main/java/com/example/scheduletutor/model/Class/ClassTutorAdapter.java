@@ -40,6 +40,8 @@ public class ClassTutorAdapter extends RecyclerView.Adapter<ClassTutorAdapter.Vi
     public void onBindViewHolder(@NonNull final ViewHolderClass holder, int i) {
         final ClassTutor classTutor = classTutorList.get(i);
         holder.tvClassName.setText(classTutor.getClassName());
+        holder.tvClassTime.setText(classTutor.getClassTime());
+        holder.tvTutorName.setText(classTutor.getTutorName());
         holder.tvClassLocation.setText(classTutor.getClassLocation());
         holder.tvClassShift.setText(classTutor.getClassShift()+" Shift");
         Glide.with(holder.itemView.getContext()).load(classTutor.getTutorPhoto()).into(holder.ivPhotoTutor);
@@ -60,12 +62,13 @@ public class ClassTutorAdapter extends RecyclerView.Adapter<ClassTutorAdapter.Vi
     public class ViewHolderClass extends RecyclerView.ViewHolder{
 
         private ImageView ivPhotoTutor;
-        private TextView tvClassName, tvClassLocation,tvClassTime, tvClassShift;
+        private TextView tvClassName,tvTutorName, tvClassLocation,tvClassTime, tvClassShift;
         private Button btnDaftar;
         public ViewHolderClass(@NonNull View itemView) {
             super(itemView);
             ivPhotoTutor = itemView.findViewById(R.id.iv_photo_tutor);
             tvClassName = itemView.findViewById(R.id.tvClassName);
+            tvTutorName = itemView.findViewById(R.id.tvTutorName);
             tvClassLocation = itemView.findViewById(R.id.tvClassLocation);
             tvClassTime = itemView.findViewById(R.id.tvClassTime);
             tvClassShift = itemView.findViewById(R.id.tvClassShift);

@@ -1,60 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="130dp"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
     android:layout_margin="10dp">
+
     <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:contentDescription="@string/photo"
         android:id="@+id/iv_photo_tutor"
-        android:layout_marginEnd="5dp"/>
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/photo" />
 
     <LinearLayout
-        android:layout_toEndOf="@id/iv_photo_tutor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_photo_tutor"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/tvClassName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/black"
-            tools:text="NamaClass"
-            android:layout_marginBottom="12dp"/>
+            android:textSize="17sp"
+            tools:text="NamaClass" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tvTutorName"
+            tools:text="TutorName"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/tvClassLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:maxLines="3"
             android:layout_marginTop="7dp"
+            android:maxLines="3"
             android:textColor="@color/black"
-            tools:text="classLocation"/>
+            android:textSize="20sp"
+            tools:text="classLocation" />
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/tvClassTime"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="17sp"
             tools:text="classTime" />
+
         <TextView
             android:id="@+id/tvClassShift"
-            android:layout_width="60dp"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:paddingTop="11dp"
             android:textColor="@color/black"
+            android:textSize="17sp"
             tools:text="3 Shift" />
     </LinearLayout>
 
@@ -62,8 +75,8 @@
         android:id="@+id/btnDaftar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/daftar"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/btn_transparent"
-        android:layout_alignParentBottom="true"/>
+        android:text="@string/daftar" />
 
 </RelativeLayout>

@@ -21,6 +21,7 @@ import com.example.scheduletutor.di.component.DaggerNetworkComponent;
 import com.example.scheduletutor.di.component.HomeComponent;
 import com.example.scheduletutor.di.component.ListFragmentComponent;
 import com.example.scheduletutor.di.component.NetworkComponent;
+import com.example.scheduletutor.di.modul.ListFragmentModule;
 import com.example.scheduletutor.di.modul.NetworkModule;
 import com.example.scheduletutor.model.Class.ClassTutor;
 import com.example.scheduletutor.model.Class.ClassTutorAdapter;
@@ -62,6 +63,7 @@ public class ListFragment extends Fragment implements HomeClassListInterface {
         classTutorAdapter = new ClassTutorAdapter(getLayoutInflater());
         rvListClass.setAdapter(classTutorAdapter);
         listFragmentComponent = DaggerListFragmentComponent.builder()
+                .listFragmentModule(new ListFragmentModule(getActivity()))
                 .networkComponent(getNetworkComponent())
                 .build();
         listFragmentComponent.Inject(this);

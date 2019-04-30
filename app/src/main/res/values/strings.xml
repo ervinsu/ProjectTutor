@@ -17,4 +17,9 @@
     <string name="photo">photo</string>
     <string name="daftar">Daftar</string>
     <string name="hapus">Hapus</string>
+    <string name="Nama_Pelajaran"> Nama Pelajaran</string>
+    <string name="Shift">Shift</string>
+    <string name="Tanggal_dan_Waktu">Tanggal dan Waktu</string>
+    <string name="Alamat">Alamat</string>
+    <string name="Kirim">Kirim</string>
 </resources>
