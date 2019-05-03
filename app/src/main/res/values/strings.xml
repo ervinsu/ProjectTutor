@@ -22,4 +22,7 @@
     <string name="Tanggal_dan_Waktu">Tanggal dan Waktu</string>
     <string name="Alamat">Alamat</string>
     <string name="Kirim">Kirim</string>
+    <string name="Jam_Masuk">Jam Masuk</string>
+    <string name="Jam_Selesai">Selesai</string>
+    <string name="jmlh">Murid : 0 / 1</string>
 </resources>

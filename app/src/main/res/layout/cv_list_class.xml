@@ -47,6 +47,8 @@
     </LinearLayout>
 
 
+
+
     <LinearLayout
         android:layout_width="105dp"
         android:layout_height="wrap_content"
@@ -69,6 +71,16 @@
             android:textColor="@color/black"
             android:textSize="17sp"
             tools:text="3 Shift" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/jmlh"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            />
     </LinearLayout>
 
     <Button

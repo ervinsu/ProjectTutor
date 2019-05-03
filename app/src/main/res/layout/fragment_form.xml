@@ -20,7 +20,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="95dp">
+        android:layout_height="90dp">
+
 
         <EditText
             android:inputType="number"
@@ -35,7 +36,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="20dp"
-            android:hint="Tanggal dan Waktu"
+            android:hint="Tanggal"
             />
 
         <EditText
@@ -47,8 +48,44 @@
             android:paddingStart="1dp"
             android:paddingEnd="10dp"
             android:gravity="center_horizontal|top"
-            android:inputType="datetime" />
+            android:inputType="date" />
+
+
+
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <EditText
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="30dp"
+            android:inputType="time"
+            android:hint="@string/Jam_Masuk"/>
+
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:text="To"
+            android:layout_marginStart="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            />
+
+        <EditText
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="13dp"
+            android:hint="@string/Jam_Selesai"
+            android:inputType="time" />
+    </LinearLayout>
+
     
     <EditText
         android:inputType="textLongMessage"
