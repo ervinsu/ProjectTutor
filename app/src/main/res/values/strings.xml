@@ -3,7 +3,7 @@
     <string name="login">Login</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="title_activity_tutor_main">TutorMainActivity</string>
+    <string name="title_activity_tutor_main">ScheduleTutor</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -19,7 +19,9 @@
     <string name="hapus">Hapus</string>
     <string name="Nama_Pelajaran"> Nama Pelajaran</string>
     <string name="Shift">Shift</string>
-    <string name="Tanggal_dan_Waktu">Tanggal dan Waktu</string>
+    <string name="Tanggal_dan_Waktu">Tanggal/Jam</string>
     <string name="Alamat">Alamat</string>
     <string name="Kirim">Kirim</string>
+    <string name="cancel">Batalkan</string>
+    <string name="active_class">Kelas Aktif</string>
 </resources>

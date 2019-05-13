@@ -38,24 +38,9 @@ public class LoginPresenter implements Presenter {
 //        mViewInterface.addUser(userResponse.getUser());
 //    }
 
-    public void fetchFlower() {
-        unSubscribeAll();
-        subscribe(mViewInterface.getUser());
-    }
-
     private void subscribe(Observable<UserResponse> users) {
         mCompositeDisposeable = new CompositeDisposable();
 
-//        mCompositeDisposeable.add(users
-//                .subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new Consumer<List<UserResponse>>() {
-//                    @Override
-//                    public void accept(List<UserResponse> userResponses) {
-//                        Log.d("BIJIQ",userResponses.size()+"");
-//                        mViewInterface.complete(userResponses);
-//                    }
-//                }));
         mCompositeDisposeable.add(users
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

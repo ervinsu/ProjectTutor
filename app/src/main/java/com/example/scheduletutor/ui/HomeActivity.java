@@ -2,39 +2,34 @@ package com.example.scheduletutor.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.scheduletutor.MainActivity;
 import com.example.scheduletutor.R;
 import com.example.scheduletutor.di.component.DaggerHomeComponent;
 import com.example.scheduletutor.di.component.HomeComponent;
 import com.example.scheduletutor.di.modul.HomeModule;
 import com.example.scheduletutor.model.User.User;
 import com.example.scheduletutor.model.User.UserLocalStore;
+import com.example.scheduletutor.ui.fragment.ActiveClassFragment;
 import com.example.scheduletutor.ui.fragment.HistoryFragment;
 import com.example.scheduletutor.ui.fragment.ListFragment;
-
-import java.net.URI;
 
 import javax.inject.Inject;
 
@@ -74,10 +69,10 @@ public class HomeActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Intent.ACTION_ALL_APPS));
+//                startActivity(new Intent(Intent.ACTION_ALL_APPS));
 //                Snackbar.make(view, "Sedang Dalam Perbaikan!", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
-
+                startActivity(new Intent(HomeActivity.this, AddClassActivity.class));
             }
         });
 
@@ -181,6 +176,8 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_history) {
             fragment= new HistoryFragment();
             Toast.makeText(this, "history", Toast.LENGTH_SHORT).show();
+        }else if (id == R.id.nav_active_class){
+            fragment = new ActiveClassFragment();
         }
         if(fragment!=null) {
             fragmentManager.beginTransaction()

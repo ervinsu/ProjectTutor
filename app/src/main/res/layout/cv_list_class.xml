@@ -58,6 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
+            android:textAlignment="textEnd"
             android:textSize="17sp"
             tools:text="classTime" />
 
@@ -67,6 +68,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="11dp"
             android:textColor="@color/black"
+            android:layout_gravity="end"
             android:textSize="17sp"
             tools:text="3 Shift" />
     </LinearLayout>

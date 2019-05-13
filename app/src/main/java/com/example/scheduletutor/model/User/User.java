@@ -24,6 +24,17 @@ public class User {
     @SerializedName("userEmail")
     @Expose
     private String userEmail;
+    @SerializedName("userPhone")
+    @Expose
+    private String userPhone;
+
+    public String getUserPhone() {
+        return userPhone;
+    }
+
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
+    }
 
     public String getUserEmail() {
         return userEmail;

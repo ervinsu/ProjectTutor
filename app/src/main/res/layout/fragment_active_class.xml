@@ -10,10 +10,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/srlListKelas">
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvClassList"
+            android:id="@+id/rvActiveClassList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/cv_list_class"/>
+            tools:listitem="@layout/cv_list_class_schedule"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 

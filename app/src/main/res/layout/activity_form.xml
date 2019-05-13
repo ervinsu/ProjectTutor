@@ -3,19 +3,20 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="300dp"
+    android:layout_height="500dp"
+    android:layout_gravity="center"
     android:orientation="vertical">
 
-    <EditText
+    <Spinner
         android:id="@+id/inNama"
-        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="15dp"
         android:hint="@string/Nama_Pelajaran"
+        android:spinnerMode="dropdown"
         />
 
     <LinearLayout
@@ -23,20 +24,23 @@
         android:layout_height="95dp">
 
         <EditText
+            android:id="@+id/etShift"
             android:inputType="number"
-            android:layout_width="80dp"
+            android:layout_width="45dp"
             android:layout_height="50dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:hint="@string/Shift" />
 
         <EditText
-            android:layout_width="230dp"
+            android:id="@+id/etDateTime"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:textSize="16sp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="20dp"
-            android:hint="Tanggal dan Waktu"
-            />
+            android:hint="@string/Tanggal_dan_Waktu"
+            android:focusable="false" />
 
         <EditText
             android:layout_width="32dp"
@@ -51,6 +55,7 @@
     </LinearLayout>
     
     <EditText
+        android:id="@+id/etAddress"
         android:inputType="textLongMessage"
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -60,26 +65,27 @@
         />
 
 
-    <FrameLayout
+    <!--<FrameLayout-->
 
-        android:layout_width="120dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="150dp"
-        android:background="@color/orange" >
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginStart="150dp"-->
+        <!--android:background="@color/orange" >-->
 
     <Button
+        android:layout_marginTop="50dp"
         android:id="@+id/Kirim"
         android:hint="@string/Kirim"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_gravity="center"
-        android:drawableEnd="@drawable/ic_menu_add"
+        android:drawableEnd="@drawable/ic_add"
         android:gravity="center"
-        android:background="@drawable/btn_transparent"
+        android:background="@drawable/btn_transparent"/>
 
-    </FrameLayout>
+    <!--</FrameLayout>-->
 
 
 

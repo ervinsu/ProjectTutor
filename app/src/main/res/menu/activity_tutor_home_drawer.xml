@@ -9,6 +9,12 @@
             android:id="@+id/nav_list_kelas_saya"
             android:icon="@drawable/ic_list"
             android:title="@string/kelas_saya" />
+
+        <item
+            android:checked="true"
+            android:id="@+id/nav_active_class"
+            android:icon="@drawable/ic_menu_calendar"
+            android:title="@string/active_class" />
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_history"
